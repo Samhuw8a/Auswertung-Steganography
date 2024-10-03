@@ -7,6 +7,7 @@ from PIL import Image
 
 def calculate_mse(original: NDArray, modified: NDArray) -> int:
     diff = np.subtract(original, modified)
+    print(diff.shape)
     mse = np.mean(np.square(diff))
     return mse
 
